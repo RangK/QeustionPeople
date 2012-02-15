@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Magazine</title>
+<style type="text/css" media="screen">@import "css/jqtouch.css";</style>
+<style type="text/css" media="screen">@import "css/theme.css";</style>
+<style type="text/css" media="screen">@import "jqt/extensions/jqt.bars/jqt.bars.css";</style>
+<style type="text/css" media="screen">@import "jqt/extensions/jqt.bars/themes/apple/theme.css";</style>
+<style type="text/css" media="screen">@import "jqt/extensions/jqt.listIndex/jqt.listIndex.css";</style>
+<style type="text/css" media="screen">@import "css/magazine_bundle.css";</style>
+<script src="jqt/jqtouch/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+<script src="jqt/jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="jqt/extensions/jqt.autotitles.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="jqt/extensions/jqt.bars/jqt.bars.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="jqt/extensions/jqt.bars/iscroll.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="jqt/extensions/jqt.listIndex/jqt.listIndex.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="js/pullToRefresh.js" type="application/x-javascript" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">
+var jQT = new $.jQTouch({
+  icon: 'jqtouch.png',
+  icon4: 'jqtouch4.png',
+  addGlossToIcon: false,
+  slideleftSelector: '#jqt > ul > li > a, #jqt > ol > li > a',
+  startupScreen: 'jqt_startup.png',
+  statusBar: 'black',
+  preloadImages: [
+    'jqt/themes/jqt/img/activeButton.png',	 	
+    'jqt/themes/jqt/img/back_button.png',
+    'jqt/themes/jqt/img/back_button_clicked.png',
+    'jqt/themes/jqt/img/blueButton.png',
+    'jqt/themes/jqt/img/button.png',
+    'jqt/themes/jqt/img/button_clicked.png',
+    'jqt/themes/jqt/img/grayButton.png',
+    'jqt/themes/jqt/img/greenButton.png',
+    'jqt/themes/jqt/img/redButton.png',
+    'jqt/themes/jqt/img/whiteButton.png',
+    'jqt/themes/jqt/img/loading.gif',
+    'images/navi/ask_off.png',
+    'images/navi/ask_on.png',
+    'images/navi/list_off.png',
+    'images/navi/list_on.png',
+    'images/navi/mypage_off.png',
+    'images/navi/mypage_on.png',
+    'images/navi/search_off.png',
+    'images/navi/search_on.png',
+    'images/navi/setting_off.png',
+    'images/navi/setting_on.png',
+  ],
+  useFastTouch: true
+});
+</script>
+<style>
+  #tabbar{
+
+  }
+  .toolbar{
+    
+  }
+  #jqt ul{
+    margin:0;
+    padding:0;
+  }
+  #jqt ul li{
+    margin:0;
+    padding:0;
+    height:55px;
+  }
+  #jqt ul li:nth-child(even){
+    background:url(images/q_list.png) repeat-x;
+  }
+  #jqt ul li .tag_icon{
+    margin:5px;
+  }
+  #jqt ul li .status_icon{
+    float:right;
+    margin-top:35px;
+  }
+</style>
+
+</head>
+<body>
+
+<!-- tabbar -->
+<div id="tabbar">
+	<div>
+    <ul>
+      <li>
+        <!-- Action from the href attribute -->
+        <a href="#step1" mask="images/navi/list_off.png" mask2x="images/navi/list_off.png">
+          <strong>LIST</strong>
+        </a>
+      </li>
+
+      <li>
+        <a href="#step2" mask="images/navi/ask_off.png" mask2x="images/navi/ask_off.png">
+          <strong>ASK</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#step3" mask="images/navi/search_off.png" mask2x="images/navi/search_off.png">
+          <small class="badge right">8</small>
+          <strong>SEARCH</strong>
+        </a>
+      </li>
+      <li>
+        <!-- Navigation to an AJAX loaded page -->
+        <a href="#step4" mask="images/navi/mypage_off.png" mask2x="images/navi/mypage_off.png">
+          <small class="badge right">4</small>
+          <strong>MYPAGE</strong>
+        </a>
+      </li>
+
+      <li>
+        <a href="#step5" mask="images/navi/setting_off.png" mask2x="images/navi/setting_off.png">
+          <small class="badge right">9</small>
+          <strong>SETTING</strong>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="jqt">
+  <!-- About -->
+  <div id="step1" class="current">
+    <div class="toolbar">
+    </div>
+    <div class="s-scrollwrapper">
+	  <ul id="thelist">
+	    <li>
+          <img class="tag_icon" src="images/sports.png">
+          <img class="status_icon" src="images/ing.png">
+        </li>
+        <li>
+          <img class="tag_icon" src="images/love.png">
+          <img class="status_icon" src="images/done.png">
+        </li>
+        <li>
+          <img class="tag_icon" src="images/sports.png">
+          <img class="status_icon" src="images/ing.png">
+        </li>
+        <li>
+          <img class="tag_icon" src="images/love.png">
+          <img class="status_icon" src="images/done.png">
+        </li>
+        <li>
+          <img class="tag_icon" src="images/sports.png">
+          <img class="status_icon" src="images/ing.png">
+        </li>
+        <li>
+          <img class="tag_icon" src="images/love.png">
+          <img class="status_icon" src="images/done.png">
+        </li>
+       </ul>
+    </div>
+  </div>
+
+  <!-- UI -->
+  <div id="step2" >
+    <div class="toolbar">
+    </div>
+    <div class="s-scrollwrapper" momentum="false" vScrollbar="false">
+      <div>
+        <div class="info">
+          <p>Add this page to your home screen to view the tabbar demo, custom icon, startup screen and full screen mode.</p>
+        </div>
+        <h2>Lists</h2>
+        <ul class="rounded">
+          <li class="arrow"><a href="#bigList">Big List</a></li>
+          <li class="arrow"><a href="#edge">Edge to Edge</a></li>
+          <li class="arrow"><a href="#plastic">Plastic</a></li>
+          <li class="arrow"><a href="#metal">Metal</a></li>
+        </ul>
+        <h2>Buttons</h2>
+        <ul class="rounded">
+          <li class="arrow"><a href="#buttons">Buttons</a></li>
+        </ul>
+        <h2>Forms</h2>
+        <ul class="rounded">
+          <li class="arrow"><a href="#forms">Forms</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animations -->
+  <div id="step3">
+    <div class="toolbar">
+    </div>
+    <div class="s-scrollwrapper">
+      <div>
+        <div class="info"> Custom animations are also <a href="http://code.google.com/p/jqtouch/wiki/Animations" target="_blank">easy to write</a>. <br />
+          View the source in <code>demos/customanimation</code> to see how. </div>
+        <ul class="rounded">
+          <li><a href="#animdemo" class="cubeleft">Cube Left</a></li>
+          <li><a href="#animdemo" class="cuberight">Cube Right</a></li>
+          <li><a href="#animdemo" class="flipleft">Flip Left</a></li>
+          <li><a href="#animdemo" class="flipright">Flip Right</a></li>
+          <li><a href="#animdemo" class="slidedown">Slide Down</a></li>
+          <li><a href="#animdemo" class="slideleft">Slide Left</a></li>
+          <li><a href="#animdemo" class="slideright">Slide Right</a></li>
+          <li><a href="#animdemo" class="slideup">Slide Up</a></li>
+          <li><a href="#animdemo" class="dissolve">Dissolve</a></li>
+          <li><a href="#animdemo" class="fade">Fade</a></li>
+          <li><a href="#animdemo" class="pop">Pop</a></li>
+          <li><a href="#animdemo" class="swap">Swap</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- Animations - AnimDemo-->
+  <div id="step4" class="unfixed">
+    <div class="toolbar">
+    </div>
+    <div class="s-scrollwrapper">
+      <div>
+        <div style="font-size: 1.5em; text-align: center; margin: 160px 0 90px; font-family: Marker felt;"> Pretty smooth, eh? </div>
+        <a style="color:rgba(0,0,0,.9)" href="#" class="whiteButton goback">Go back</a>
+      </div>
+    </div>
+  </div>
+
+<!-- AJAX - Callback -->
+  <div id="step5">
+    <div class="toolbar">
+      <a class="back" href="#">AJAX</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
