@@ -8,14 +8,13 @@
 <style type="text/css" media="screen">@import "jqt/extensions/jqt.bars/jqt.bars.css";</style>
 <style type="text/css" media="screen">@import "jqt/extensions/jqt.bars/themes/apple/theme.css";</style>
 <style type="text/css" media="screen">@import "jqt/extensions/jqt.listIndex/jqt.listIndex.css";</style>
-<style type="text/css" media="screen">@import "css/magazine_bundle.css";</style>
+<style type="text/css" media="screen">@import "css/list.css";</style>
 <script src="jqt/jqtouch/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
 <script src="jqt/jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
 <script src="jqt/extensions/jqt.autotitles.js" type="application/x-javascript" charset="utf-8"></script>
 <script src="jqt/extensions/jqt.bars/jqt.bars.js" type="application/x-javascript" charset="utf-8"></script>
 <script src="jqt/extensions/jqt.bars/iscroll.js" type="application/x-javascript" charset="utf-8"></script>
 <script src="jqt/extensions/jqt.listIndex/jqt.listIndex.js" type="application/x-javascript" charset="utf-8"></script>
-<script src="js/pullToRefresh.js" type="application/x-javascript" charset="utf-8"></script>
 
 <script type="text/javascript" charset="utf-8">
 var jQT = new $.jQTouch({
@@ -52,30 +51,8 @@ var jQT = new $.jQTouch({
 });
 </script>
 <style>
-  #tabbar{
-
-  }
-  .toolbar{
-    
-  }
-  #jqt ul{
-    margin:0;
-    padding:0;
-  }
-  #jqt ul li{
-    margin:0;
-    padding:0;
-    height:55px;
-  }
-  #jqt ul li:nth-child(even){
+  #jqt #thelist li:nth-child(even){
     background:url(images/q_list.png) repeat-x;
-  }
-  #jqt ul li .tag_icon{
-    margin:5px;
-  }
-  #jqt ul li .status_icon{
-    float:right;
-    margin-top:35px;
   }
 </style>
 
@@ -87,7 +64,6 @@ var jQT = new $.jQTouch({
 	<div>
     <ul>
       <li>
-        <!-- Action from the href attribute -->
         <a href="#step1" mask="images/navi/list_off.png" mask2x="images/navi/list_off.png">
           <strong>LIST</strong>
         </a>
@@ -105,7 +81,6 @@ var jQT = new $.jQTouch({
         </a>
       </li>
       <li>
-        <!-- Navigation to an AJAX loaded page -->
         <a href="#step4" mask="images/navi/mypage_off.png" mask2x="images/navi/mypage_off.png">
           <small class="badge right">4</small>
           <strong>MYPAGE</strong>
@@ -123,7 +98,7 @@ var jQT = new $.jQTouch({
 </div>
 
 <div id="jqt">
-  <!-- About -->
+  <!-- List -->
   <div id="step1" class="current">
     <div class="toolbar">
     </div>
@@ -131,28 +106,41 @@ var jQT = new $.jQTouch({
 	  <ul id="thelist">
 	    <li>
           <img class="tag_icon" src="images/sports.png">
-          <img class="status_icon" src="images/ing.png">
+            <p class="tag">sports</p>
+            <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
+            <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
         </li>
         <li>
           <img class="tag_icon" src="images/love.png">
-          <img class="status_icon" src="images/done.png">
+            <p class="tag">sports</p>
+            <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
+            <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
         </li>
         <li>
           <img class="tag_icon" src="images/sports.png">
-          <img class="status_icon" src="images/ing.png">
+            <p class="tag">sports</p>
+            <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
+            <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
         </li>
         <li>
           <img class="tag_icon" src="images/love.png">
-          <img class="status_icon" src="images/done.png">
+            <p class="tag">sports</p>
+            <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
+            <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
         </li>
         <li>
           <img class="tag_icon" src="images/sports.png">
-          <img class="status_icon" src="images/ing.png">
+            <p class="tag">sports</p>
+            <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
+            <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
         </li>
         <li>
           <img class="tag_icon" src="images/love.png">
-          <img class="status_icon" src="images/done.png">
+            <p class="tag">sports</p>
+            <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
+            <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
         </li>
+
        </ul>
     </div>
   </div>

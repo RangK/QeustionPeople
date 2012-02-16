@@ -1,0 +1,21 @@
+#jqt #thelist {
+  margin: 0;
+  padding: 0; }
+  #jqt #thelist li {
+    margin: 0;
+    padding: 0;
+    height: 55px; }
+    #jqt #thelist li .tag_icon {
+      float: left;
+      margin: 5px; }
+    #jqt #thelist li .status_icon {
+      float: right; }
+    #jqt #thelist li p {
+      font-size: 12px; }
+    #jqt #thelist li .tag {
+      color: grey;
+      font-size: 12px; }
+    #jqt #thelist li .title {
+      font-size: 14px; }
+    #jqt #thelist li .during {
+      font-size: 10px; }
