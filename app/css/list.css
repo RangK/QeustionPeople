@@ -1,21 +1,135 @@
+#jqt .results {
+  background: #FFF; }
+  #jqt .results .answer_body .styled {
+    display: none; }
+  #jqt .results .answer_body a {
+    margin-left: 129px;
+    border: none;
+    background: url(../images/button.png) no-repeat;
+    width: 73px;
+    height: 46px;
+    display: block;
+    text-align: center; }
+    #jqt .results .answer_body a img {
+      margin-top: 15px; }
+  #jqt .results .answer_body ul {
+    margin-top: 10px; }
+    #jqt .results .answer_body ul li {
+      height: 32px; }
+      #jqt .results .answer_body ul li img {
+        float: left;
+        margin-left: 22px;
+        margin-right: 16px; }
+      #jqt .results .answer_body ul li .percent {
+        margin: 0;
+        float: right; }
+      #jqt .results .answer_body ul li p {
+        display: inline;
+        font-size: 10pt; }
+  #jqt .results .toolbar a {
+    width: 40px;
+    height: 40px; }
+    #jqt .results .toolbar a img {
+      margin: 10px; }
+  #jqt .results .answer_title {
+    background: url(../images/ask_box.png) no-repeat;
+    height: 90px;
+    padding: 10px; }
+    #jqt .results .answer_title .tag_icon {
+      float: left;
+      margin-right: 10px; }
+    #jqt .results .answer_title .status_icon {
+      float: right; }
+    #jqt .results .answer_title p {
+      font-size: 12px; }
+    #jqt .results .answer_title .tag {
+      color: grey;
+      font-size: 12px; }
+    #jqt .results .answer_title .title {
+      font-size: 14px; }
+    #jqt .results .answer_title .during {
+      font-size: 10px; }
+  #jqt .results .answer_type {
+    text-align: center; }
+    #jqt .results .answer_type p {
+      font-size: 10pt; }
+      #jqt .results .answer_type p img {
+        width: 17px;
+        height: 17px;
+        vertical-align: middle; }
+#jqt .answers {
+  background: #FFF; }
+  #jqt .answers .answer_body .styled {
+    display: none; }
+  #jqt .answers .answer_body #push {
+    margin-left: 129px;
+    border: none;
+    background: url(../images/button.png) no-repeat;
+    width: 73px;
+    height: 46px;
+    display: block;
+    text-align: center; }
+    #jqt .answers .answer_body #push img {
+      margin-top: 10px; }
+  #jqt .answers .answer_body ul {
+    margin-top: 10px; }
+    #jqt .answers .answer_body ul li {
+      height: 32px; }
+      #jqt .answers .answer_body ul li img {
+        float: left;
+        margin-left: 22px;
+        margin-right: 16px; }
+      #jqt .answers .answer_body ul li p {
+        font-size: 10pt; }
+  #jqt .answers .toolbar a {
+    width: 40px;
+    height: 40px; }
+    #jqt .answers .toolbar a img {
+      margin: 10px; }
+  #jqt .answers .answer_title {
+    background: url(../images/ask_box.png) no-repeat;
+    height: 90px;
+    padding: 10px; }
+    #jqt .answers .answer_title .tag_icon {
+      float: left;
+      margin-right: 10px; }
+    #jqt .answers .answer_title .status_icon {
+      float: right; }
+    #jqt .answers .answer_title p {
+      font-size: 12px; }
+    #jqt .answers .answer_title .tag {
+      color: grey;
+      font-size: 12px; }
+    #jqt .answers .answer_title .title {
+      font-size: 14px; }
+    #jqt .answers .answer_title .during {
+      font-size: 10px; }
+  #jqt .answers .answer_type {
+    text-align: center; }
+    #jqt .answers .answer_type p {
+      font-size: 10pt; }
+      #jqt .answers .answer_type p img {
+        width: 17px;
+        height: 17px;
+        vertical-align: middle; }
 #jqt #thelist {
   margin: 0;
   padding: 0; }
-  #jqt #thelist li {
+  #jqt #thelist li a {
     margin: 0;
     padding: 0;
     height: 55px; }
-    #jqt #thelist li .tag_icon {
+    #jqt #thelist li a .tag_icon {
       float: left;
       margin: 5px; }
-    #jqt #thelist li .status_icon {
+    #jqt #thelist li a .status_icon {
       float: right; }
-    #jqt #thelist li p {
+    #jqt #thelist li a p {
       font-size: 12px; }
-    #jqt #thelist li .tag {
+    #jqt #thelist li a .tag {
       color: grey;
       font-size: 12px; }
-    #jqt #thelist li .title {
+    #jqt #thelist li a .title {
       font-size: 14px; }
-    #jqt #thelist li .during {
+    #jqt #thelist li a .during {
       font-size: 10px; }

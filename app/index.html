@@ -2,13 +2,18 @@
 <html>
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
 <title>Magazine</title>
 <style type="text/css" media="screen">@import "css/jqtouch.css";</style>
 <style type="text/css" media="screen">@import "css/theme.css";</style>
-<style type="text/css" media="screen">@import "jqt/extensions/jqt.bars/jqt.bars.css";</style>
+<style type="text/css" media="screen">@import "css/jqt.bars/jqt.bars.css";</style>
 <style type="text/css" media="screen">@import "jqt/extensions/jqt.bars/themes/apple/theme.css";</style>
-<style type="text/css" media="screen">@import "jqt/extensions/jqt.listIndex/jqt.listIndex.css";</style>
 <style type="text/css" media="screen">@import "css/list.css";</style>
+
 <script src="jqt/jqtouch/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
 <script src="jqt/jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
 <script src="jqt/extensions/jqt.autotitles.js" type="application/x-javascript" charset="utf-8"></script>
@@ -49,11 +54,52 @@ var jQT = new $.jQTouch({
   ],
   useFastTouch: true
 });
+$(function(){
+  jQT.addAnimation({
+    name: 'qplelist',
+    selector: '.qple_list'
+  });
+
+});
+
 </script>
 <style>
+  #jqt ul{
+    border:none;
+  }
+  #jqt ul li{
+    border:none;
+  }
   #jqt #thelist li:nth-child(even){
     background:url(images/q_list.png) repeat-x;
   }
+
+  div#jqt .qplelist.in {
+    -webkit-animation-name: dontmove;
+   	z-index: 0;
+  }
+
+  div#jqt .qplelist.out {
+ 	-webkit-animation-name: qplelistout;
+   	z-index: 10;
+  }
+  div#jqt .qplelist.out.reverse {
+   	z-index: 0;
+   	-webkit-animation-name: dontmove;
+  }
+  div#jqt .qplelist.in.reverse {
+   	z-index: 10;
+  	-webkit-animation-name: qplelistin;
+  }
+  @-webkit-keyframes qplelistin {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(0); }
+  }
+  @-webkit-keyframes qplelistout {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(100%); }
+  }
+
 </style>
 
 </head>
@@ -98,6 +144,127 @@ var jQT = new $.jQTouch({
 </div>
 
 <div id="jqt">
+  <div id="result" class="results">
+    <div class="toolbar">
+      <a href="#" class="goback"><img class="back_icon" src="images/back_on.png"></a>
+    </div>
+    <div class="s-scrollwrapper">
+    <div>
+      <div class="answer_title">
+        <img class="tag_icon" src="images/sports.png">
+        <p class="tag">sports</p>
+        <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
+        <p class="during">2012.01.01 ~ 2012.04.01</p>
+      </div>
+      <div class="answer_type">
+        <p>
+          <img class="type_icon" src="images/Q_checkbox_on.png">
+          객관식 형식
+        </p>
+      </div>
+      <script type='text/javascript'>
+        $(document).ready(function(){
+           $('.select_list').click(function(){
+             $('.check_img').attr('src','images/Q_checkbox.png');
+             $(this).find('img').attr('src','images/Q_checkbox_on.png');
+           });
+        });
+      </script>
+
+      <div class="answer_body">
+        <ul>
+          <li>
+            <input type="radio" class="styled" name="answer">
+            <img src="images/Q_checkbox.png"><p>김성환</p>
+            <img class="percent" src="images/percent/percent2.png">
+            </input> 
+          </li>
+          <li>
+            <input type="radio" class="styled" name="answer">
+            <img src="images/Q_checkbox.png"><p>선동렬</p>
+            <img class="percent" src="images/percent/percent2.png">
+            </input> 
+          </li>
+          <li>
+            <input type="radio" class="styled" name="answer">
+            <img src="images/Q_checkbox.png"><p>최동원</p>
+            <img class="percent" src="images/percent/percent3.png">
+            </input> 
+          </li>
+          <li>
+            <input type="radio" class="styled" name="answer">
+            <img src="images/Q_checkbox.png"><p>박찬호</p>
+            <img class="percent" src="images/percent/percent4.png">
+            </input> 
+          </li>
+          <li>
+            <input type="radio" class="styled" name="answer">
+            <img src="images/Q_checkbox.png"><p>임창용</p>
+            <img class="percent" src="images/percent/percent.png">
+            </input> 
+          </li>
+        </ul>
+        <a id="back" href="#step1"><img src="images/next_pageoff.png"></a>
+        <a id="save" href="#"><img src="images/my_pageoff.png"></a>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div id="answer" class="answers">
+    <div class="toolbar">
+      <a href="#" class="goback"><img class="back_icon" src="images/back_on.png"></a>
+    </div>
+    <div class="s-scrollwrapper">
+    <div>
+      <div class="answer_title">
+        <img class="tag_icon" src="images/sports.png">
+        <p class="tag">sports</p>
+        <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
+        <p class="during">2012.01.01 ~ 2012.04.01</p>
+      </div>
+      <div class="answer_type">
+        <p>
+          <img class="type_icon" src="images/Q_checkbox_on.png">
+          객관식 형식
+        </p>
+      </div>
+      <script type='text/javascript'>
+        $(document).ready(function(){
+           $('.select_list').click(function(){
+             $('.check_img').attr('src','images/Q_checkbox.png');
+             $(this).find('img').attr('src','images/Q_checkbox_on.png');
+           });
+        });
+      </script>
+
+      <div class="answer_body">
+        <ul>
+          <li class="select_list">
+            <input type="radio" class="styled" name="answer">
+            <img class="check_img" src="images/Q_checkbox.png"><p>김성환</p></input> 
+          </li>
+          <li class="select_list">
+            <input type="radio" class="styled" name="answer">
+            <img class="check_img" src="images/Q_checkbox.png"><p>선동렬</p></input> 
+          </li>
+          <li class="select_list">
+            <input type="radio" class="styled" name="answer">
+            <img class="check_img" src="images/Q_checkbox.png"><p>최동원</p></input> 
+          </li>
+          <li class="select_list">
+            <input type="radio" class="styled" name="answer">
+            <img class="check_img" src="images/Q_checkbox.png"><p>박찬호</p></input> 
+          </li>
+          <li class="select_list">
+            <input type="radio" class="styled" name="answer">
+            <img class="check_img" src="images/Q_checkbox.png"><p>임창용</p></input> 
+          </li>
+        </ul>
+        <a id="push" href="#result"><img src="images/push_off.png"></a>
+      </div>
+    </div>
+    </div>
+  </div>
   <!-- List -->
   <div id="step1" class="current">
     <div class="toolbar">
@@ -105,42 +272,54 @@ var jQT = new $.jQTouch({
     <div class="s-scrollwrapper">
 	  <ul id="thelist">
 	    <li>
-          <img class="tag_icon" src="images/sports.png">
+          <a href="#answer" class="qple_list">
+            <img class="tag_icon" src="images/sports.png">
             <p class="tag">sports</p>
             <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
             <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
+          </a>
         </li>
         <li>
-          <img class="tag_icon" src="images/love.png">
+          <a href="#answer" class="qple_list">
+            <img class="tag_icon" src="images/love.png">
             <p class="tag">sports</p>
             <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
             <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
+          </a>
         </li>
         <li>
-          <img class="tag_icon" src="images/sports.png">
+          <a href="#answer" class="qple_list">
+            <img class="tag_icon" src="images/sports.png">
             <p class="tag">sports</p>
             <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
             <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
+          </a>
         </li>
         <li>
-          <img class="tag_icon" src="images/love.png">
+          <a href="#answer" class="qple_list">
+            <img class="tag_icon" src="images/love.png">
             <p class="tag">sports</p>
             <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
             <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
+          </a>
         </li>
         <li>
-          <img class="tag_icon" src="images/sports.png">
+          <a href="#answer" class="qple_list">
+            <img class="tag_icon" src="images/sports.png">
             <p class="tag">sports</p>
             <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
             <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
+          </a>
         </li>
         <li>
-          <img class="tag_icon" src="images/love.png">
+          <a href="#answer" class="qple_list">
+            <img class="tag_icon" src="images/love.png">
             <p class="tag">sports</p>
             <p class="title">[야구] 역대 최고의 투수는 누구 ?</p>
             <p class="during">2012.01.01 ~ 2012.04.01<img class="status_icon" src="images/ing.png"></p>
+          </a>
         </li>
-
+        
        </ul>
     </div>
   </div>

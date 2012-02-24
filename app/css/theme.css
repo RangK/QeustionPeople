@@ -1,7 +1,9 @@
 body {
     background: rgb(0,0,0);
 }
-
+#jqt{
+  width:320px;
+}
 #jqt > * {
     background: rgb(197,204,211) url(img/pinstripes.png);
 }
@@ -19,7 +21,7 @@ body {
     -webkit-box-sizing: border-box;
     border-bottom: 1px solid #2d3642;
     height: 40px;
-    background: url(img/toolbar.png)  repeat-x;
+    background: url(img/toolbar.png) #6d84a2 repeat-x;
     position: relative;
 }
 
@@ -158,7 +160,7 @@ body {
     border: 1px solid #B4B4B4;
     font: bold 17px "Helvetica Neue", Helvetica;
     padding: 0;
-    margin: 15px 10px 17px 10px;
+    -webkit-border-radius: 8px;
 }
 
 #jqt ul li {
@@ -171,9 +173,13 @@ body {
 
 #jqt li:first-child, #jqt li:first-child a {
     border-top: 0;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
 }
 
 #jqt li:last-child, #jqt li:last-child a {
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
 }
 
 /* universal arrows */
